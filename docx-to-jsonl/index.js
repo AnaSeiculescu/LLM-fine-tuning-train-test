@@ -10,8 +10,12 @@ async function docxToJsonl(docxFilePath, jsonlFilePath) {
         // Trim the content
         const trimmedContent = docxContent.trim();
 
+        // String processing according to the Llama 2 model template
+        let processedContent = `<s>[INST]${trimmedContent}</s>`;
+        processedContent = processedContent.replace("Oferta pentru firma", "[/INST]Oferta pentru firma");
+
         // Create a single JSON object
-        const jsonObject = { text: trimmedContent };
+        const jsonObject = { text: processedContent };
 
         // Convert the JSON object to a JSON string
         const jsonString = JSON.stringify(jsonObject);
