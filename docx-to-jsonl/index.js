@@ -2,10 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const mammoth = require("mammoth");
 
-// Define the paths
-const docxFilePath = path.join(__dirname, "OfertaTest1.docx");
-const jsonlFilePath = path.join(__dirname, "train1.jsonl");
-
 async function docxToJsonl(docxFilePath, jsonlFilePath) {
     try {
         // Extract raw text from the .docx file asynchronously
@@ -33,4 +29,12 @@ async function docxToJsonl(docxFilePath, jsonlFilePath) {
     }
 }
 
-docxToJsonl(docxFilePath, jsonlFilePath);
+let docxFilePath;
+let jsonlFilePath;
+
+for (let i = 1; i < 15; i++) {
+    docxFilePath = path.join(__dirname, `OfertaTest${i}.docx`);
+    jsonlFilePath = path.join(__dirname, `train${i}.jsonl`);
+
+    docxToJsonl(docxFilePath, jsonlFilePath);
+}
