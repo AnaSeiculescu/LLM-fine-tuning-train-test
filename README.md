@@ -2,14 +2,15 @@
 
 ## Generalitati
 
--   Am lucrat proiectul in Google Colab
--   Am folosit o varianta comprimata a modelul de limbaj (LLM) open-source Llama 2
+-   Am lucrat proiectul in Google Colab.
+-   Am folosit o varianta comprimata a modelul de limbaj (LLM) open-source Llama 2.
 -   Am folosit datele resursa din Datasets - in contul meu de HuggingFace, de unde au fost importate:
+    [https://huggingface.co/datasets/AnaSeiculescu/fine-tuning-tests]
 
 ## Rularea proiectului
 
--   Deschide fisierul de jupyter notebook atasat
--   Ruleaza fiecare secventa de cod (sari peste secventa [10] ("# Empty VRAM"), ruleaz-o numai daca ai incercat repetate ori restul secventelor, si este necesara eliberarea de memorie)
+-   Deschide fisierul de jupyter notebook atasat.
+-   Ruleaza fiecare secventa de cod (sari peste secventa [10] ("# Empty VRAM"), ruleaz-o numai daca ai incercat repetate ori restul secventelor, si este necesara eliberarea de memorie).
 -   In secventa [9] de cod ("# Run text generation pipeline with our next model"), variabila "prompt" primeste manual instructiunile de "user prompt", sau cerintele clientului.
 -   Noul model antrenat il gasesti stocat si in link-ul de HuggingFace de mai jos:
 
@@ -34,7 +35,7 @@
 -   In cazul modelului elaborat de mine testarea se realizeaza manual, prin valorificarea variabilei "prompt".
 
 -   In urma evaluarii incercarilor am observat ca sunt de ajutor:
-    -   texte cat mai generale despre ce ne dorim sa obtinem ca rezultat;
+    -   texte cat mai generale care descriu ce ne dorim sa obtinem ca rezultat;
     -   repetarile aceleiasi instructiuni, poate in alta forma/exprimare;
     -   folosirea termenilor radicali: "trebuie", "numai";
-    -   ca variabila "prompt" (care primeste un string) sa contina de asemenea si o secventa de System promt (instructiuni generale, concise, poate repetate, si cu exprimari deloc sofisticate);
+    -   ca variabila "prompt" (care primeste un string) sa contina de asemenea si o secventa de System prompt (instructiuni generale, concise, poate repetate, si cu exprimari deloc sofisticate).
