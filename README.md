@@ -2,17 +2,19 @@
 
 ## Generalitati
 
--   Am lucrat proiectul in Google Colab.
+-   Am lucrat proiectul in environmentul Google Colab.
 -   Am folosit o varianta comprimata a modelul de limbaj (LLM) open-source Llama 2.
 -   Am folosit datele resursa din Datasets - in contul meu de HuggingFace, de unde au fost importate:
     [https://huggingface.co/datasets/AnaSeiculescu/fine-tuning-tests]
 
 ## Rularea proiectului
 
--   Deschide fisierul de jupyter notebook atasat.
--   Ruleaza fiecare secventa de cod (sari peste secventa [10] ("# Empty VRAM"), ruleaz-o numai daca ai incercat repetate ori restul secventelor, si este necesara eliberarea de memorie).
--   In secventa [9] de cod ("# Run text generation pipeline with our next model"), variabila "prompt" primeste manual instructiunile de "user prompt", sau cerintele clientului.
+-   Deschide fisierul de jupyter notebook atasat in repository.
+-   Ruleaza secventele de cod pana la **Secventa 7** inclusiv. Poti rula si **Secventa 8** ("# Empty VRAM"), insa numai daca ai incercat repetate ori restul secventelor, si este necesara eliberarea de memorie.
+-   In **Secventa 7** de cod ("# Run text generation pipeline with our next model"), variabila "prompt" primeste manual instructiunile de "user prompt", sau cerintele clientului.
+-   **Secventele** de cod **9**, **10** si **11** pregatesc si executa stocarea noului model in platforma HuggingFace.
 -   Noul model antrenat il gasesti stocat si in link-ul de HuggingFace de mai jos:
+    [https://huggingface.co/AnaSeiculescu/Llama-2-7b-chat-finetune-Veziv-test-03]
 
 ## Dependintele proiectului
 
@@ -38,4 +40,5 @@
     -   texte cat mai generale care descriu ce ne dorim sa obtinem ca rezultat;
     -   repetarile aceleiasi instructiuni, poate in alta forma/exprimare;
     -   folosirea termenilor radicali: "trebuie", "numai";
-    -   ca variabila "prompt" (care primeste un string) sa contina de asemenea si o secventa de System prompt (instructiuni generale, concise, poate repetate, si cu exprimari deloc sofisticate).
+    -   ca variabila "prompt" (care primeste un string) sa contina de asemenea si o secventa de System prompt (instructiuni generale, concise, poate repetate, si cu exprimari deloc sofisticate);
+    -   texte cu diacritice, in cazul limbii romane.
